@@ -1,7 +1,8 @@
-<section>
-  <h1 class="center-md">Create a joke</h1>
-  <app-joke-form-component></app-joke-form-component>
-  <app-joke-list-component></app-joke-list-component>
-  <app-joke-card-component></app-joke-card-component>
+<section class="container jokes-section">
+    <p class="jokes__heading center-md">Create a joke</p>
+    <app-joke-form-component
+      (addJokeEvent)="addJoke($event)"></app-joke-form-component>
+    <app-joke-list-component
+      [jokeStorage]="jokeStorage"
+      (deleteJokeEvent)="deleteJoke($event)"></app-joke-list-component>
 </section>
-

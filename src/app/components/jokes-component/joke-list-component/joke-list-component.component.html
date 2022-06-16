@@ -1,0 +1,6 @@
+<div *ngIf="jokeStorage">
+  <app-joke-card-component
+    *ngFor="let joke of jokeStorage; let i = index"
+    [jokeStorage]="joke"
+    (deleteJokeEvent)="deleteJoke(i)"></app-joke-card-component>
+</div>

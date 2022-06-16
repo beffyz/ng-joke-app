@@ -1,0 +1,8 @@
+<div class="joke-card" *ngIf="jokeStorage">
+  <h4>{{ jokeStorage.question }}</h4>
+  <p *ngIf="showAnswer">{{ jokeStorage.answer }}</p>
+  <button class="joke-card__tell-me--btn" (click)="toggleAnswerVisibility()">
+    {{ this.showAnswer === true ? 'Hide Answer' : 'Tell me' }}
+  </button>
+  <button class="joke-card__remove--btn" (click)="deleteJoke()">Delete</button>
+</div>

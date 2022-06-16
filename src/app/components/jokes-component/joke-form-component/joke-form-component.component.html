@@ -1,14 +1,21 @@
-<div class="center-md">
-  <div>
-    <form action="">
-      <p>Question</p>
-      <input placeholder="Enter the question..." type="text" />
-    </form>
+<div class="jokes-input">
+  <form [formGroup]="jokesForm" class="jokes-input__form">
+    <p>Question</p>
+    <input
+      formControlName="question"
+      class="jokes-input__form--input"
+      type="text"
+      placeholder="Enter the question..." />
 
-    <form action="">
-      <p>Answer</p>
-      <input placeholder="Enter the punchline..." type="text" />
-    </form>
-  </div>
-  <button>Create</button>
+    <p>Answer</p>
+    <input
+      formControlName="answer"
+      class="jokes-input__form--input"
+      type="text"
+      placeholder="Enter the punchline..." />
+    <span>
+      {{ errorMessage }}
+    </span>
+    <button class="jokes-input__button" (click)="addJoke()">Create</button>
+  </form>
 </div>
